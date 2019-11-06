@@ -49,6 +49,9 @@ Open `config/admin.php` and add the following configuration to the extensions se
                 'amap' => [
                     'api_key' => '3693fe745aea0df8852739dac08a22fb',
                 ],
+                'here' => [
+                    'app_key' => 'ge9UXrAsMYpda3d_d95yffNPbzT_8j_JJLoucbEWeD0'
+                ],
             ]
         ]
     ]
@@ -76,12 +79,6 @@ Use in show page
 ```php
 $show->field('Position')->latlong('lat_column', 'long_column', $height = 400, $zoom = 16);
 ```
-
-## Donate
-
-如果觉得这个项目帮你节约了时间，不妨支持一下;)
-
-![-1](https://cloud.githubusercontent.com/assets/1479100/23287423/45c68202-fa78-11e6-8125-3e365101a313.jpg)
 
 License
 ------------
