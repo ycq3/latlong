@@ -20,6 +20,7 @@ class Extension extends BaseExtension
         'amap'    => Map\Amap::class,
         'google'  => Map\Google::class,
         'yandex'  => Map\Yandex::class,
+        'here'    => Map\Here::class,
     ];
 
     /**
@@ -48,18 +49,16 @@ class Extension extends BaseExtension
      */
     public static function showField()
     {
-        return function ($lat, $lng, $height = 300, $zoom = 16) {
+        return function ($lat, $lng, $height = 300) {
 
-            return $this->unescape()->as(function () use ($lat, $lng, $height, $zoom) {
+            return $this->unescape()->as(function () use ($lat, $lng, $height) {
 
                 $lat = $this->{$lat};
                 $lng = $this->{$lng};
+
                 $id = ['lat' => 'lat', 'lng' => 'lng'];
-                Admin::script(Extension::getProvider()
-                    ->setParams([
-                        'zoom' => $zoom
-                    ])
-                    ->applyScript($id));
+
+                Admin::script(Extension::getProvider()->applyScript($id));
 
                 return <<<HTML
 <div class="row">

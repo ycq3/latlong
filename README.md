@@ -39,15 +39,19 @@ Open `config/admin.php` and add the following configuration to the extensions se
                 ],
 
                 'baidu' => [
-                    'api_key' => 'xck5u2lga9n1bZkiaXIHtMufWXQnVhdx',
+                    'api_key' => 'xck5**************************dx',
                 ],
 
                 'tencent' => [
-                    'api_key' => 'VVYBZ-HRJCX-NOJ4Z-ZO3PU-ZZA2J-QPBBT',
+                    'api_key' => 'VV***-*****-*****-*****-*****-**BBT',
                 ],
 
                 'amap' => [
-                    'api_key' => '3693fe745aea0df8852739dac08a22fb',
+                    'api_key' => '3693**************************fb',
+                ],
+
+                'here' => [
+                    'app_key' => 'ge*************************************WeD0'
                 ],
             ]
         ]
@@ -76,12 +80,6 @@ Use in show page
 ```php
 $show->field('Position')->latlong('lat_column', 'long_column', $height = 400, $zoom = 16);
 ```
-
-## Donate
-
-如果觉得这个项目帮你节约了时间，不妨支持一下;)
-
-![-1](https://cloud.githubusercontent.com/assets/1479100/23287423/45c68202-fa78-11e6-8125-3e365101a313.jpg)
 
 License
 ------------

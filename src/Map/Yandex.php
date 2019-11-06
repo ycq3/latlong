@@ -24,7 +24,7 @@ class Yandex extends AbstractMap
         
                     var myMap = new ymaps.Map("map_"+name, {
                         center: [lat.val(), lng.val()],
-                        zoom: {$this->getParams('zoom')}
+                        zoom: 18
                     }); 
     
                     var myPlacemark = new ymaps.Placemark([lat.val(), lng.val()], {
